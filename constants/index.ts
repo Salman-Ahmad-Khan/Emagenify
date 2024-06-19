@@ -11,12 +11,12 @@ export const navLinks = [
     },
     {
       label: "Generative Fill",
-      route: "/transformations/add/fill",
+      route: "/transformations/add/generative-fill",
       icon: "/assets/icons/stars.svg",
     },
     {
       label: "Object Remove",
-      route: "/transformations/add/remove",
+      route: "/transformations/add/remove-object",
       icon: "/assets/icons/scan.svg",
     },
     {
@@ -26,7 +26,7 @@ export const navLinks = [
     },
     {
       label: "Background Remove",
-      route: "/transformations/add/removeBackground",
+      route: "/transformations/add/remove-background",
       icon: "/assets/icons/camera.svg",
     },
     {
