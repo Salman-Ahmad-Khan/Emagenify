@@ -48,7 +48,13 @@ const Profile = async ({ searchParams }: SearchParamProps) => {
             <h2 className="h2-bold text-dark-600">{images?.data.length}</h2>
           </div>
         </div>
+
+        
       </section>
+
+      <div className="need-help">
+          <p>Need help? Just shoot an email at support@imaginify.com</p>
+        </div>
 
       <section className="mt-8 md:mt-14">
         <Collection
