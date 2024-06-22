@@ -96,6 +96,27 @@ export const Collection = ({
 };
 
 const Card = ({ image }: { image: IImage }) => {
+  const formatTime = (date: Date) => {
+    const hour = date.getHours();
+    const minute = date.getMinutes();
+    const period = hour >= 12 ? 'PM' : 'AM';
+    const formattedHour = hour % 12 === 0 ? 12 : hour % 12;
+    const formattedMinute = minute < 10 ? `0${minute}` : minute;
+    return `${formattedHour}:${formattedMinute} ${period}`;
+  };
+
+  const formatDate = (date: Date) => {
+    const day = date.getDate();
+    const month = date.toLocaleString('default', { month: 'short' });
+    const year = date.getFullYear();
+    return `${day} ${month} ${year}`;
+  };
+
+  const formattedDate = image.createdAt ? new Date(image.createdAt) : null;
+  const formattedTime = formattedDate ? formatTime(formattedDate) : '';
+  const formattedDateString = formattedDate ? formatDate(formattedDate) : '';
+
+ 
   return (
     <li>
       <Link href={`/transformations/${image._id}`} className="collection-card">
@@ -104,6 +125,8 @@ const Card = ({ image }: { image: IImage }) => {
           alt={image.title}
           width={image.width}
           height={image.height}
+          // createdAt={image.createdAt}
+
           {...image.config}
           loading="lazy"
           className="h-52 w-full rounded-[10px] object-cover"
@@ -124,6 +147,8 @@ const Card = ({ image }: { image: IImage }) => {
             height={24}
           />
         </div>
+
+        <p>{formattedTime} • {formattedDateString}</p>
       </Link>
     </li>
   );

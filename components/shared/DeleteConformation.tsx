@@ -38,7 +38,7 @@ export const DeleteConfirmation = ({ imageId }: { imageId: string }) => {
             Are you sure you want to delete this image?
           </AlertDialogTitle>
           <AlertDialogDescription className="p-16-regular">
-            This will permanently delete this image
+          This action cannot be undone
           </AlertDialogDescription>
         </AlertDialogHeader>
 
