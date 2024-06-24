@@ -12,6 +12,7 @@ export interface IImage extends Document {
   aspectRatio?: string;
   color?: string;
   prompt?: string;
+  photo?: string;
   author: {
     _id: string;
     firstName: string;

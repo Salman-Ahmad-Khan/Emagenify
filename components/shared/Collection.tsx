@@ -125,7 +125,6 @@ const Card = ({ image }: { image: IImage }) => {
           alt={image.title}
           width={image.width}
           height={image.height}
-          // createdAt={image.createdAt}
 
           {...image.config}
           loading="lazy"
@@ -147,8 +146,9 @@ const Card = ({ image }: { image: IImage }) => {
             height={24}
           />
         </div>
-
-        <p>{formattedTime} • {formattedDateString}</p>
+        <p>
+          {image.author.firstName}</p>
+        <p className="-mt-4">{formattedTime} • {formattedDateString}</p>
       </Link>
     </li>
   );
