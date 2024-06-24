@@ -12,7 +12,7 @@ import Checkout from "@/components/shared/Checkout";
 const Credits = async () => {
   const { userId } = auth();
 
-  if (!userId) redirect("/sign-in");
+  if (!userId) redirect("/");
 
   const user = await getUserById(userId);
 

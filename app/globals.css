@@ -110,7 +110,7 @@
   /* ===== TYPOGRAPHY */
   /* 44 */
   .h1-semibold {
-    @apply text-[36px] font-semibold sm:text-[44px] leading-[120%] sm:leading-[56px];
+    @apply text-[36px] font-extrabold sm:text-[44px] leading-[120%] sm:leading-[56px];
   }
 
   /* 36 */
@@ -230,11 +230,14 @@
   /* Home Page */
   
 .home {
-  @apply flex-center h-72 flex-col gap-4 rounded-[20px] border bg-banner bg-cover bg-no-repeat p-10 shadow-inner;
+  @apply sm:flex-center hidden h-72 flex-col gap-4 rounded-[20px] border bg-banner bg-cover bg-no-repeat p-10 shadow-inner m-2;
+}
+.home-heading-mobile {
+  @apply h1-semibold text-white h-36 rounded-[20px] bg-banner bg-cover bg-no-repeat flex-center -mt-3 p-2 mb-4;
 }
 
 .home-heading {
-  @apply h1-semibold max-w-[500px] flex-wrap text-center text-white shadow-sm;
+  @apply h1-semibold flex-wrap text-center text-white shadow-sm;
 }
 
 

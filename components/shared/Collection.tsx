@@ -24,11 +24,13 @@ export const Collection = ({
   images,
   totalPages = 1,
   page,
+  showInspirationText = true,
 }: {
   images: IImage[];
   totalPages?: number;
   page: number;
   hasSearch?: boolean;
+  showInspirationText?: boolean;
 }) => {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -49,7 +51,10 @@ export const Collection = ({
   return (
     <>
       <div className="collection-heading">
-        <h2 className="h2-bold text-dark-600">Recent Edits</h2>
+        <h2 className="h2-bold text-nowrap text-dark-600">Recent Edits</h2>
+
+        {showInspirationText && (
+        <p className="text-xs">Get inspired by the community, see what others are making and share your own images</p> )}
         {hasSearch && <Search />}
       </div>
 

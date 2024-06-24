@@ -11,7 +11,7 @@ const Profile = async ({ searchParams }: SearchParamProps) => {
   const page = Number(searchParams?.page) || 1;
   const { userId } = auth();
 
-  if (!userId) redirect("/sign-in");
+  if (!userId) redirect("/");
 
   const user = await getUserById(userId);
   const images = await getUserImages({ page, userId: user._id });
@@ -61,6 +61,7 @@ const Profile = async ({ searchParams }: SearchParamProps) => {
           images={images?.data}
           totalPages={images?.totalPages}
           page={page}
+          showInspirationText={false}
         />
       </section>
     </>

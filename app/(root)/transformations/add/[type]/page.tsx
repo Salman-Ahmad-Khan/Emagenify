@@ -17,7 +17,7 @@ const AddTransformationTypePage = async ({
 
   return (
     <> 
-     <Header title={transformation.title} subtitle={transformation.subTitle} />
+     <Header title={transformation.title} subtitle={transformation.subTitle} protip={transformation.protip}  />
 
 
 <TransformationForm 
