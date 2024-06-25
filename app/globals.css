@@ -233,7 +233,7 @@
   @apply sm:flex-center hidden h-72 flex-col gap-4 rounded-[20px] border bg-banner bg-cover bg-no-repeat p-10 shadow-inner m-2;
 }
 .home-heading-mobile {
-  @apply h1-semibold text-white h-36 rounded-[20px] bg-banner bg-cover bg-no-repeat flex-center -mt-3 p-2 mb-4;
+  @apply h1-semibold text-white  rounded-[20px] bg-banner bg-cover bg-no-repeat flex-center -mt-3 p-2 mb-4;
 }
 
 .home-heading {

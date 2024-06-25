@@ -124,7 +124,7 @@ const Card = ({ image }: { image: IImage }) => {
  
   return (
     <li>
-      <Link href={`/transformations/${image._id}`} className="collection-card">
+      <Link href={`/transformations/${image._id}`} className="collection-card hover:scale-95 hover:bg-purple-600/20">
         <CldImage
           src={image.publicId}
           alt={image.title}

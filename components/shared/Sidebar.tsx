@@ -7,15 +7,96 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Button } from '../ui/button'
 
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/components/ui/avatar"
+
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card"
+
+
 const Sidebar = () => {
   const pathname = usePathname();
 
   return (
     <aside className="sidebar">
       <div className="flex size-full flex-col gap-4">
-        <Link href="/" className="sidebar-logo">
+        {/* <Link href="/" className="sidebar-logo">
+          <Image src="/assets/images/logo-text.svg" alt="logo" width={180} height={28} />
+        </Link> */}
+
+        {/* <HoverCard>
+  <HoverCardTrigger> <Link href="/" className="sidebar-logo">
+          <Image src="/assets/images/logo-text.svg" alt="logo" width={180} height={28} />
+        </Link></HoverCardTrigger>
+  <HoverCardContent>
+  Creatively transform your images, using AI to automatically generate pixels that integrate seamlessly into the picture. Use these transformations to extend your images to new dimensions, remove, replace or recolor items, or restore degraded images.
+  </HoverCardContent>
+</HoverCard> */}
+
+
+<HoverCard>
+      <HoverCardTrigger asChild>
+      <Link href="/" className="sidebar-logo">
           <Image src="/assets/images/logo-text.svg" alt="logo" width={180} height={28} />
         </Link>
+      </HoverCardTrigger>
+      <HoverCardContent className="w-2/3 m-20">
+        <div className="flex justify-between space-x-4">
+          <Avatar>
+            <AvatarImage src="/assets/images/logo-text.svg"/>
+            <AvatarFallback>VC</AvatarFallback>
+          </Avatar>
+          <div className="space-y-1">
+            <h1 className="text-3xl font-bold text-purple-700">About</h1>
+            <p className="text-base text-purple-700">
+            Creatively transform your images, using AI to automatically generate pixels that integrate seamlessly into the picture. Use these transformations to extend your images to new dimensions, remove, replace or recolor items, or restore degraded images.
+            </p>
+            
+            <h4 className="text-sm font-semibold">Generative fill</h4>
+            <p className="text-sm">
+            Generative fill, utilized with various cropping methods, uses AI to expand original images, aiding in orientation changes. It seamlessly integrates AI-generated backgrounds with existing content, facilitating creative solutions and reducing workflow time.
+            </p>
+            <h4 className="text-sm font-semibold">Generative recolor</h4>
+            <p className="text-sm">
+            Generative recolor enables color alterations in images using natural language, through AI and NLP. This feature simplifies creating color variants, especially beneficial for e-commerce products, 
+            </p>
+            <h4 className="text-sm font-semibold">Generative remove</h4>
+            <p className="text-sm">
+            Generative remove effortlessly eliminates unwanted objects, text, or user-defined regions from images,enabling scalable object removal tasks which traditionally would require significant time and effort.
+            </p>
+            <h4 className="text-sm font-semibold">Generative restore</h4>
+            <p className="text-sm">
+            Generative restore uses AI to mend image imperfections like compression artifacts, noise, and blurriness. Through a two-step restoration process, it recovers lost details and refines the image, enhancing the clarity and quality of old or damaged photos and user-generated content.
+            </p>
+               
+            </div>
+          </div>
+        
+      </HoverCardContent>
+    </HoverCard>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <nav className="sidebar-nav">
           <SignedIn>

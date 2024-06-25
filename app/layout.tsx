@@ -14,7 +14,7 @@ const IBMPlex = IBM_Plex_Sans({
 
 export const metadata: Metadata = {
   title: "Emagenify",
-  description: "AI-powered image generator",
+  description: "AI-powered solutions to effortlessly remove backgrounds, restore old photos, recolor objects, eliminate unwanted elements, and expand images with generative fill.",
 };
 
 export default function RootLayout({

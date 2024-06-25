@@ -13,9 +13,9 @@ const Home = async ({ searchParams }: SearchParamProps) => {
   return (
     <>
       <section className="home">
-        <h1 className="home-heading">
+        <h1 className="home-heading uppercase">
         {/* Elevate Your Creativity with Imaginify */}
-        Get creative with your images
+        Use AI and get creative with your images
         </h1>
 
         
@@ -39,10 +39,11 @@ const Home = async ({ searchParams }: SearchParamProps) => {
 
       <section className="block sm:hidden">
       <h1 className="home-heading-mobile ">
-        Get creative with your images
+        {/* Get creative with your images,  */}
+        Use AI to transform your images to new dimensions, remove, recolor and restore degraded images
         </h1>
        
-      </section>
+         </section>
 
       <section className="sm:mt-12">
         <Collection 
