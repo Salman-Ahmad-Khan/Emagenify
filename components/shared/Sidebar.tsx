@@ -46,11 +46,11 @@ const Sidebar = () => {
           <Image src="/assets/images/logo-text.svg" alt="logo" width={180} height={28} />
         </Link>
       </HoverCardTrigger>
-      <HoverCardContent className="w-2/3 m-20">
+      <HoverCardContent className="w-1/3 m-20">
         <div className="flex justify-between space-x-4">
           <Avatar>
             <AvatarImage src="/assets/images/logo-text.svg"/>
-            <AvatarFallback>VC</AvatarFallback>
+            <AvatarFallback>Logo</AvatarFallback>
           </Avatar>
           <div className="space-y-1">
             <h1 className="text-3xl font-bold text-purple-700">About</h1>
@@ -58,20 +58,20 @@ const Sidebar = () => {
             Creatively transform your images, using AI to automatically generate pixels that integrate seamlessly into the picture. Use these transformations to extend your images to new dimensions, remove, replace or recolor items, or restore degraded images.
             </p>
             
-            <h4 className="text-sm font-semibold">Generative fill</h4>
-            <p className="text-sm">
+            <h4 className="text-sm font-semibold text-purple-700">Generative fill</h4>
+            <p className="text-sm text-dark-600">
             Generative fill, utilized with various cropping methods, uses AI to expand original images, aiding in orientation changes. It seamlessly integrates AI-generated backgrounds with existing content, facilitating creative solutions and reducing workflow time.
             </p>
-            <h4 className="text-sm font-semibold">Generative recolor</h4>
-            <p className="text-sm">
+            <h4 className="text-sm font-semibold text-purple-700">Generative recolor</h4>
+            <p className="text-sm text-dark-600">
             Generative recolor enables color alterations in images using natural language, through AI and NLP. This feature simplifies creating color variants, especially beneficial for e-commerce products, 
             </p>
-            <h4 className="text-sm font-semibold">Generative remove</h4>
-            <p className="text-sm">
+            <h4 className="text-sm font-semibold text-purple-700">Generative remove</h4>
+            <p className="text-sm text-dark-600">
             Generative remove effortlessly eliminates unwanted objects, text, or user-defined regions from images,enabling scalable object removal tasks which traditionally would require significant time and effort.
             </p>
-            <h4 className="text-sm font-semibold">Generative restore</h4>
-            <p className="text-sm">
+            <h4 className="text-sm font-semibold text-purple-700">Generative restore</h4>
+            <p className="text-sm text-dark-600">
             Generative restore uses AI to mend image imperfections like compression artifacts, noise, and blurriness. Through a two-step restoration process, it recovers lost details and refines the image, enhancing the clarity and quality of old or damaged photos and user-generated content.
             </p>
                
@@ -153,13 +153,13 @@ const Sidebar = () => {
           </SignedIn>
 
           <SignedOut>
-            <Button asChild className="button bg-purple-gradient bg-cover">
+            <Button asChild className="button bg-purple-gradient bg-cover hover:scale-95">
               <Link href="/sign-in">Login</Link>
             </Button>
             <div
   className="relative grid w-full max-w-[28rem] flex-col items-end justify-center overflow-hidden rounded-xl bg-white bg-clip-border text-center text-gray-700">
   <div
-    className="absolute inset-0 m-0 h-full w-full overflow-hidden rounded-none bg-transparent bg-[url('https://images.unsplash.com/photo-1552960562-daf630e9278b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80')] bg-cover bg-clip-border bg-center text-gray-700 shadow-none">
+    className="absolute inset-0 m-0 h-full w-full overflow-hidden rounded-none bg-transparent bg-[url('/assets/images/side-img.avif')] bg-cover bg-clip-border bg-center text-gray-700 shadow-none">
     <div className="absolute inset-0 w-full h-full to-bg-black-10 bg-gradient-to-t from-black/80 via-black/50"></div>
   </div>
   <div className="relative p-6 px-6 py-14 md:px-12">
