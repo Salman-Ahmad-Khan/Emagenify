@@ -16,28 +16,19 @@ import {
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
 
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
 const MobileNav = () => {
   const pathname = usePathname();
 
   return (
     <header className="header">
-      {/* <Link href="/" className="flex items-center gap-2 md:py-2">
-        <Image
-          src="/assets/images/logo-text.svg"
-          alt="logo"
-          width={180}
-          height={28}
-        />
-      </Link> */}
-
-      {/* <HoverCard>
-  <HoverCardTrigger> <Link href="/" className="sidebar-logo">
-          <Image src="/assets/images/logo-text.svg" alt="logo" width={180} height={28} />
-        </Link></HoverCardTrigger>
-  <HoverCardContent>
-  Creatively transform your images, using AI to automatically generate pixels that integrate seamlessly into the picture. Use these transformations to extend your images to new dimensions, remove, replace or recolor items, or restore degraded images.
-  </HoverCardContent>
-</HoverCard> */}
+      
 
       <HoverCard>
         <HoverCardTrigger asChild>
@@ -52,31 +43,50 @@ const MobileNav = () => {
           </Link>
         </HoverCardTrigger>
         <HoverCardContent className="">
-          <div className="">
-            <div className="space-y-1">
-              <h1 className="font-bold text-purple-700">About</h1>
-              <p className="text-base text-purple-700">
-              Creatively transform your images, using AI to automatically generate pixels that integrate seamlessly into the picture.
-              </p>
+         
 
-              <h4 className="text-sm font-semibold text-purple-700">Generative fill</h4>
-              <p className="text-sm text-dark-600">
-              Naturally extend your images to fit new dimensions.
-              </p>
-              <h4 className="text-sm font-semibold text-purple-700">Generative recolor</h4>
-              <p className="text-sm text-dark-600">
-              Recolor elements of your images.
-              </p>
-              <h4 className="text-sm font-semibold text-purple-700">Generative remove</h4>
-              <p className="text-sm text-dark-600">
-              Seamlessly remove parts of your images.
-              </p>
-              <h4 className="text-sm font-semibold text-purple-700">Generative restore</h4>
-              <p className="text-sm text-dark-600">
-              Restore degraded and poor quality images.
-              </p>
-            </div>
-          </div>
+
+          <div className="space-y-1">
+                <h1 className="text-3xl font-bold text-dark-600">About</h1>
+                <p className="text-base text-dark-500">
+                Creatively transform your images, using AI to automatically generate pixels that integrate seamlessly into the picture.
+                </p>
+
+                <Accordion type="single" collapsible className="w-full">
+                  <AccordionItem value="item-1">
+                    <AccordionTrigger className="text-dark-600">
+                      Generative fill
+                    </AccordionTrigger>
+                    <AccordionContent className="text-dark-500">
+                    Naturally extend your images to fit new dimensions.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-2">
+                    <AccordionTrigger className="text-dark-600">
+                      Generative recolor
+                    </AccordionTrigger>
+                    <AccordionContent className="text-dark-500">
+                    Recolor elements of your images.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-3">
+                    <AccordionTrigger className="text-dark-600">
+                      Generative remove
+                    </AccordionTrigger>
+                    <AccordionContent className="text-dark-500">
+                    Seamlessly remove parts of your images.
+                    </AccordionContent>
+                  </AccordionItem>
+                  <AccordionItem value="item-4">
+                    <AccordionTrigger className="text-dark-600">
+                      Generative restore
+                    </AccordionTrigger>
+                    <AccordionContent className="text-dark-500">
+                    Restore degraded and poor quality images.
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+              </div>
         </HoverCardContent>
       </HoverCard>
 
