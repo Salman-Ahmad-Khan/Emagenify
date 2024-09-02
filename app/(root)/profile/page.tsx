@@ -53,7 +53,7 @@ const Profile = async ({ searchParams }: SearchParamProps) => {
       </section>
 
       <div className="need-help">
-          <p>Need help? Just shoot an email at support@imaginify.com</p>
+          <p>Need help? Just shoot an email at connect.celman@gmail.com</p>
         </div>
 
       <section className="mt-8 md:mt-14">

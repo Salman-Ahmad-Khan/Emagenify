@@ -124,7 +124,7 @@ export const transformationTypes = {
     type: "restore",
     title: "Restore Image",
     subTitle: "Refine images by removing noise and imperfections",
-    protip:"Protip: For best results, upload an image that is blurry or over-compressed",
+    protip:"Protip: For best results, upload an image that is blurry or over-compressed, dark or over saturated",
     config: { restore: true },
     icon: "image.svg",
   },
@@ -157,7 +157,7 @@ export const transformationTypes = {
   recolor: {
     type: "recolor",
     title: "Object Recolor",
-    subTitle: "Detect and recolor objects from the image",
+    subTitle: "Detect objects with natural language and change their color",
     protip:"",
     config: {
       recolor: { prompt: "", to: "", multiple: true },

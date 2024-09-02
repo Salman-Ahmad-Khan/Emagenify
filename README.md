@@ -32,8 +32,6 @@
 
 ## <a name="features">🔋 Features</a>
 
-Here's your text with the sentences replaced using backticks:
-
  `Authentication and Authorization`: Secure user access with registration, login, and route protection.
 
  `Community Image Showcase`: Explore user transformations with easy navigation using pagination
