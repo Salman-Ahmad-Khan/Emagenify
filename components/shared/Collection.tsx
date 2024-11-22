@@ -16,17 +16,16 @@ import { IImage } from "@/lib/database/models/image.model";
 import { formUrlQuery } from "@/lib/utils";
 
 import { Button } from "../ui/button";
-
 import { Search } from "./Search";
 
 export const Collection = ({
   hasSearch = false,
-  images,
+  images = [], // Ensuring images is always defined as an empty array by default
   totalPages = 1,
   page,
   showInspirationText = true,
 }: {
-  images: IImage[];
+  images: IImage[]; // images is always an array as per your expectation
   totalPages?: number;
   page: number;
   hasSearch?: boolean;
@@ -51,17 +50,19 @@ export const Collection = ({
   return (
     <>
       <div className="collection-heading">
-        <h2 className="h2-bold text-nowrap text-dark-600">Recent Edits</h2>
+        <h2 className="h2-bold text-nowrap text-primary-foreground">Recent Edits</h2>
 
         {showInspirationText && (
-        <p className="text-xs">Get inspired by the community, see what others are making and share your own images</p> )}
+          <p className="text-xs text-muted-foreground">
+            Get inspired by the community, see what others are making and share your own images
+          </p>
+        )}
         {hasSearch && <Search />}
       </div>
 
       {images.length > 0 ? (
         <ul className="collection-list">
           {images.map((image) => (
-            // <Card image={image} key={image._id} />
             <Card image={image} key={image._id as string} />
           ))}
         </ul>
@@ -87,7 +88,7 @@ export const Collection = ({
             </p>
 
             <Button
-              className="button w-32 bg-purple-gradient bg-cover text-white"
+              className="bg-primary w-32 button text-white"
               onClick={() => onPageChange("next")}
               disabled={Number(page) >= totalPages}
             >
@@ -121,39 +122,34 @@ const Card = ({ image }: { image: IImage }) => {
   const formattedTime = formattedDate ? formatTime(formattedDate) : '';
   const formattedDateString = formattedDate ? formatDate(formattedDate) : '';
 
- 
   return (
     <li>
-      <Link href={`/transformations/${image._id}`} className="collection-card hover:scale-95 hover:bg-purple-600/20">
+      <Link href={`/transformations/${image._id}`} className="collection-card hover:scale-95 hover:bg-secondary">
         <CldImage
           src={image.publicId}
           alt={image.title}
           width={image.width}
           height={image.height}
-
           {...image.config}
           loading="lazy"
           className="h-52 w-full rounded-[10px] object-cover"
           sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 33vw"
         />
         <div className="flex-between">
-          <p className="p-20-semibold mr-3 line-clamp-1 text-dark-600">
+          <p className="p-20-semibold mr-3 line-clamp-1 text-foreground">
             {image.title}
           </p>
           <Image
             src={`/assets/icons/${
-              transformationTypes[
-                image.transformationType as TransformationTypeKey
-              ].icon
+              transformationTypes[image.transformationType as TransformationTypeKey].icon
             }`}
             alt={image.title}
             width={24}
             height={24}
           />
         </div>
-        <p>
-          {image.author.firstName}</p>
-        <p className="-mt-4">{formattedTime} • {formattedDateString}</p>
+        <p className="text-muted-foreground">{image.author?.firstName || "Unknown Author"}</p>
+        <p className="-mt-4 text-muted-foreground">{formattedTime} • {formattedDateString}</p>
       </Link>
     </li>
   );
