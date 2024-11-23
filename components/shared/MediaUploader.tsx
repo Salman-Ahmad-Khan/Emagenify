@@ -53,7 +53,7 @@ const MediaUploader = ({
 
   return (
     <CldUploadWidget
-      uploadPreset="msm_emagenify"
+      uploadPreset="emagnify"
       options={{
         multiple: false,
         resourceType: "image",
