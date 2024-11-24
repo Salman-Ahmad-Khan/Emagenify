@@ -34,8 +34,8 @@ export const DeleteConfirmation = ({ imageId }: { imageId: string }) => {
 
       <AlertDialogContent className="flex flex-col gap-10">
         <AlertDialogHeader>
-          <AlertDialogTitle>
-            Are you sure you want to delete this image?
+          <AlertDialogTitle className="text-dark-700">
+            Are you sure?
           </AlertDialogTitle>
           <AlertDialogDescription className="p-16-regular">
           This action cannot be undone

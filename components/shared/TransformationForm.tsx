@@ -307,7 +307,7 @@ const TransformationForm = ({ action, data = null, userId, type, creditBalance, 
             className="submit-button capitalize"
             disabled={isSubmitting}
           >
-            {isSubmitting ? 'Submitting...' : 'Save Image'}
+            {isSubmitting ? 'Saving...' : 'Save Image'}
           </Button>
         </div>
       </form>

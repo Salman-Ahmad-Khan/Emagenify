@@ -150,7 +150,7 @@
   }
 
   .input-field {
-    @apply rounded-[16px] border-2 border-green-200/20 shadow-sm shadow-green-200/15 text-dark-600 disabled:opacity-100 p-16-semibold h-[50px] md:h-[54px] focus-visible:ring-offset-0 px-4 py-3 focus-visible:ring-transparent !important;
+    @apply rounded-[16px] border-2 border-green-500/20 shadow-sm shadow-green-200/15 text-dark-600 disabled:opacity-100 p-16-semibold h-[50px] md:h-[54px] focus-visible:ring-offset-0 px-4 py-3 focus-visible:ring-green-500 !important;
   }
 
   .search-field {
@@ -299,7 +299,7 @@
 
   /* Sidebar Component */
   .sidebar {
-    @apply hidden h-screen w-72 bg-white p-5 shadow-md shadow-green-200/50 lg:flex;
+    @apply hidden h-screen w-72 bg-white p-5 shadow-xl shadow-green-500 lg:flex;
   }
 
   .sidebar-logo {
