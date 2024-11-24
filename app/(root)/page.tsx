@@ -5,6 +5,12 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Separator } from "@/components/ui/separator";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Imagnify | Home",
+  description: "AI-powered solutions to effortlessly remove backgrounds, restore old photos, recolor objects, eliminate unwanted elements, and expand images with generative fill.",
+};
 
 const Home = async ({ searchParams }: SearchParamProps) => {
   const page = Number(searchParams?.page) || 1;
