@@ -8,6 +8,12 @@ import { Button } from "@/components/ui/button";
 import { plans } from "@/constants";
 import { getUserById } from "@/lib/actions/user.actions";
 import Checkout from "@/components/shared/Checkout";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Credits",
+  description: "",
+};
 
 const Credits = async () => {
   const { userId } = auth();
@@ -29,11 +35,11 @@ const Credits = async () => {
             <li key={plan.name} className="credits-item">
               <div className="flex-center flex-col gap-3">
                 <Image src={plan.icon} alt="check" width={50} height={50} />
-                <p className="p-20-semibold mt-2 text-purple-500">
+                <p className="p-20-semibold mt-2 text-green-500">
                   {plan.name}
                 </p>
                 <p className="h1-semibold text-dark-600">${plan.price}</p>
-                <p className="p-16-regular">{plan.credits} Credits</p>
+                <p className="p-16-regular text-green-400">{plan.credits} Credits</p>
               </div>
 
               {/* Inclusions */}

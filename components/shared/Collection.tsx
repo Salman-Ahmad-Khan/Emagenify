@@ -50,7 +50,7 @@ export const Collection = ({
   return (
     <>
       <div className="collection-heading">
-        <h2 className="h2-bold text-nowrap text-primary-foreground">Recent Edits</h2>
+        <h2 className="h2-bold text-nowrap text-green-500">Recent Edits</h2>
 
         {showInspirationText && (
           <p className="text-xs text-muted-foreground">
@@ -124,7 +124,7 @@ const Card = ({ image }: { image: IImage }) => {
 
   return (
     <li>
-      <Link href={`/transformations/${image._id}`} className="collection-card hover:scale-95 hover:bg-secondary">
+      <Link href={`/transformations/${image._id}`} className="collection-card hover:scale-95">
         <CldImage
           src={image.publicId}
           alt={image.title}
@@ -136,7 +136,7 @@ const Card = ({ image }: { image: IImage }) => {
           sizes="(max-width: 767px) 100vw, (max-width: 1279px) 50vw, 33vw"
         />
         <div className="flex-between">
-          <p className="p-20-semibold mr-3 line-clamp-1 text-foreground">
+          <p className="p-20-semibold mr-3 line-clamp-1 text-dark-600">
             {image.title}
           </p>
           <Image
@@ -148,8 +148,8 @@ const Card = ({ image }: { image: IImage }) => {
             height={24}
           />
         </div>
-        <p className="text-muted-foreground">{image.author?.firstName || "Unknown Author"}</p>
-        <p className="-mt-4 text-muted-foreground">{formattedTime} • {formattedDateString}</p>
+        <p className="text-dark-400">{image.author?.firstName || "Unknown Author"}</p>
+        <p className="-mt-4 text-dark-400">{formattedTime} • {formattedDateString}</p>
       </Link>
     </li>
   );

@@ -13,7 +13,7 @@ const IBMPlex = IBM_Plex_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Emagenify",
+  title: "Imagnify | Home",
   description: "AI-powered solutions to effortlessly remove backgrounds, restore old photos, recolor objects, eliminate unwanted elements, and expand images with generative fill.",
 };
 
@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider appearance={{
-      variables: { colorPrimary:'#FFD700'}
+      variables: { colorPrimary:'#00bf63'}
     }}>
    
       <html lang="en">

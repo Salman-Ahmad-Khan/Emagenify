@@ -28,7 +28,7 @@ const Home = async ({ searchParams }: SearchParamProps) => {
               href={link.route}
               className="flex-center flex-col gap-2 hover:scale-95"
             >
-              <li className="flex-center w-fit rounded-lg bg-white p-4">
+              <li className="flex-center w-fit rounded-lg bg-green-200 p-4">
                 <Image src={link.icon} alt="image" width={24} height={24} />
               </li>
               <p className="p-14-medium text-center text-white">{link.label}</p>
@@ -57,7 +57,7 @@ const Home = async ({ searchParams }: SearchParamProps) => {
 
         <footer className="container text-center mt-4">
           <p className="text-[10px]">
-            © 2024 Imaginify with ♥ for the people of the internet.
+            © 2024 Imagnify with <span className="text-green-500">♥</span> for the people of the internet.
           </p>
         </footer>
       </section>

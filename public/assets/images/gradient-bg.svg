@@ -1,9 +1,5 @@
-<svg width="576" height="131" viewBox="0 0 576 131" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="576" height="131" fill="url(#paint0_linear_2036_2102)"/>
-<defs>
-<linearGradient id="paint0_linear_2036_2102" x1="0" y1="0" x2="56.6563" y2="249.115" gradientUnits="userSpaceOnUse">
-<stop stop-color="#868CFF"/>
-<stop offset="1" stop-color="#4318FF"/>
-</linearGradient>
-</defs>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1584px" height="396px" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g><path style="opacity:1" fill="#00bf62" d="M -0.5,-0.5 C 527.5,-0.5 1055.5,-0.5 1583.5,-0.5C 1583.5,131.5 1583.5,263.5 1583.5,395.5C 1055.5,395.5 527.5,395.5 -0.5,395.5C -0.5,263.5 -0.5,131.5 -0.5,-0.5 Z"/></g>
 </svg>
