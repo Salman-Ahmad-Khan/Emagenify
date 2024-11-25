@@ -9,7 +9,6 @@ import { getImageById } from "@/lib/actions/image.actions";
 import { getImageSize } from "@/lib/utils";
 import { DeleteConfirmation } from "@/components/shared/DeleteConformation";
 
-
 const ImageDetails = async ({ params: { id } }: SearchParamProps) => {
   const { userId } = auth();
 
@@ -18,7 +17,7 @@ const ImageDetails = async ({ params: { id } }: SearchParamProps) => {
   const formatTime = (date: Date) => {
     const hour = date.getHours();
     const minute = date.getMinutes();
-    const period = hour >= 12 ? 'PM' : 'AM';
+    const period = hour >= 12 ? "PM" : "AM";
     const formattedHour = hour % 12 === 0 ? 12 : hour % 12;
     const formattedMinute = minute < 10 ? `0${minute}` : minute;
     return `${formattedHour}:${formattedMinute} ${period}`;
@@ -26,24 +25,27 @@ const ImageDetails = async ({ params: { id } }: SearchParamProps) => {
 
   const formatDate = (date: Date) => {
     const day = date.getDate();
-    const month = date.toLocaleString('default', { month: 'short' });
+    const month = date.toLocaleString("default", { month: "short" });
     const year = date.getFullYear();
     return `${day} ${month} ${year}`;
   };
 
-
-  
-
-
-
   const formattedCreatedAt = image.createdAt ? new Date(image.createdAt) : null;
-const formattedUpdatedAt = image.updatedAt ? new Date(image.updatedAt) : null;
+  const formattedUpdatedAt = image.updatedAt ? new Date(image.updatedAt) : null;
 
-const formattedCreatedAtTime = formattedCreatedAt ? formatTime(formattedCreatedAt) : '';
-const formattedCreatedAtDateString = formattedCreatedAt ? formatDate(formattedCreatedAt) : '';
+  const formattedCreatedAtTime = formattedCreatedAt
+    ? formatTime(formattedCreatedAt)
+    : "";
+  const formattedCreatedAtDateString = formattedCreatedAt
+    ? formatDate(formattedCreatedAt)
+    : "";
 
-const formattedUpdatedAtTime = formattedUpdatedAt ? formatTime(formattedUpdatedAt) : '';
-const formattedUpdatedAtDateString = formattedUpdatedAt ? formatDate(formattedUpdatedAt) : '';
+  const formattedUpdatedAtTime = formattedUpdatedAt
+    ? formatTime(formattedUpdatedAt)
+    : "";
+  const formattedUpdatedAtDateString = formattedUpdatedAt
+    ? formatDate(formattedUpdatedAt)
+    : "";
 
   return (
     <>
@@ -86,23 +88,26 @@ const formattedUpdatedAtDateString = formattedUpdatedAt ? formatDate(formattedUp
             </div>
           </>
         )}
-
       </section>
 
-     <section>
-     <div className="p-14-medium md:p-16-medium flex gap-2 pt-2">
+      <section>
+        <div className="p-14-medium md:p-16-medium flex gap-2 pt-2">
           <p className="text-dark-600">Created at:</p>
           <p className=" capitalize text-green-400">
-          <p>{formattedCreatedAtTime} • {formattedCreatedAtDateString}</p>
+            <p>
+              {formattedCreatedAtTime} • {formattedCreatedAtDateString}
+            </p>
           </p>
         </div>
-<div className="p-14-medium md:p-16-medium flex gap-2 pt-2">
+        <div className="p-14-medium md:p-16-medium flex gap-2 pt-2">
           <p className="text-dark-600">Updated at:</p>
           <p className=" capitalize text-green-400">
-          <p>{formattedUpdatedAtTime} • {formattedUpdatedAtDateString}</p>
+            <p>
+              {formattedUpdatedAtTime} • {formattedUpdatedAtDateString}
+            </p>
           </p>
         </div>
-     </section>
+      </section>
 
       <section className="mt-10 border-t border-dark-400/15">
         <div className="transformation-grid">

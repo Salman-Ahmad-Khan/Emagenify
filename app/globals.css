@@ -333,7 +333,7 @@
 
   /* TransformedImage Component */
   .download-btn {
-    @apply p-14-medium mt-2 flex items-center gap-2 px-2;
+    @apply p-14-medium border-2 border-green-500 rounded-md bg-green-100 mt-2 flex items-center gap-2 px-2 text-dark-600;
   }
 
   .transformed-image {
