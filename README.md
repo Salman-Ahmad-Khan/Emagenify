@@ -1,6 +1,6 @@
 <div align="center">
   <br />
-   <a href="https://ibb.co/9ZnTy41"><img src="https://i.ibb.co/cYJF28Z/Screenshot-2024-07-13-092733.jpg" alt="Screenshot-2024-07-13-092733" border="0"></a>
+  <a href="https://ibb.co/W5WKKtG"><img src="https://i.ibb.co/MSDNN6Z/p1.png" alt="p1" border="0"></a>
   <br />
 
   <div>
@@ -63,8 +63,5 @@
  `Responsive UI/UX`: A seamless experience across devices with a user-friendly interface
 
 and many more, including code architecture and reusability
-
-
-# TODO: Database & Models Setup
 
 
